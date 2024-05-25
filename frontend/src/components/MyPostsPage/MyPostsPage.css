@@ -1,0 +1,262 @@
+.myPostsPage-container {
+    display: flex;
+    height: 100vh;
+    background-color: #0d67b5; 
+  }
+  
+  .sidebar {
+    background-color: #0d67b5;
+    color: white;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding-top: 20px; 
+  }
+  
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    width: 80%; 
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  
+  .sidebar-item:hover {
+    background-color: #0b5ca4; 
+  }
+  
+  .sidebar-item-icon {
+    margin-right: 10px; 
+  }
+  
+  .sidebar-item-text {
+    font-size: 18px;
+  }
+  
+  .sidebar-item.active {
+    background-color: #0056b3; 
+  }
+  
+  .logout {
+    margin-top: auto; 
+  }
+  
+  
+  .content-container {
+    flex-grow: 1;
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    overflow-y: auto; 
+  }
+  
+  .post {
+    background-color: #f8f9fa; 
+    border: 1px solid #e1e1e1; 
+    border-radius: 8px; 
+    padding: 1rem; 
+    margin-bottom: 1rem; 
+    width: 90%; 
+    max-width: 800px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    display: flex;
+    flex-direction: column;
+    margin-left: 8rem;
+  }
+  
+  .post-image-container {
+    width: 100%; 
+    overflow: hidden; 
+    border-top-left-radius: 8px; 
+    border-top-right-radius: 8px; 
+    margin-bottom: 1rem; 
+  }
+  
+  .post-image {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+  }
+  
+  .post-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .post-title {
+    font-size: 1.25rem; 
+    margin-bottom: 0.5rem; 
+    color: #333; 
+  }
+  
+  .post-description {
+    font-size: 1rem; 
+    color: #666; 
+    margin-bottom: 0.5rem; 
+  }
+  
+  .post-date {
+    font-size: 0.85rem; 
+    color: #999; 
+    margin-bottom: 0.25rem; 
+  }
+  
+  .post-location {
+    font-size: 0.85rem; 
+    color: #999; 
+    margin-bottom: 1rem; 
+  }
+  
+  .post-edit-button {
+    background-color: #0d67b5;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px; 
+    cursor: pointer;
+    align-self: start; 
+    font-size: 0.9rem; 
+    margin-top: auto; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .post-edit-button:hover {
+    background-color: #0b5ca4; 
+  }
+  
+
+  .content-container button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 60px; 
+      padding: 10px 0; 
+    }
+  
+    .sidebar-item {
+      justify-content: center; 
+      padding: 15px 0; 
+    }
+  
+    .sidebar-item-icon {
+      margin: 0; 
+    }
+  
+    .sidebar-item-text {
+      display: none; 
+    }
+  
+    .content-container {
+        padding: 1rem; 
+      }
+      
+      .post {
+        flex-direction: column; 
+      }
+      
+      .post-image-container {
+        width: 100%; 
+      }
+      
+      .post-image {
+        height: auto; 
+      }
+      
+      .post-details {
+        padding: 1rem; 
+      }
+      
+      .post-edit-button {
+        width: 100%; 
+        margin-top: 1rem; 
+      }
+      
+      .logout {
+        width: 100%; 
+        text-align: center; 
+      }
+      
+
+
+      @media (max-width: 480px) {
+    .sidebar {
+      padding: 10px 5px; 
+    }
+  
+    .post {
+      padding: 1rem; 
+      margin-bottom: 0.5rem; 
+    }
+  
+    .post-edit-button {
+      padding: 8px 10px; 
+      font-size: 0.8rem; 
+    }
+  
+    .content-container {
+      padding: 1rem; 
+    }
+  }
+  
+
+  @media print {
+    .sidebar,
+    .sidebar-toggle,
+    .logout {
+      display: none; 
+    }
+  
+    .content-container {
+      width: 100%; 
+      border: none; 
+    }
+  
+    .post {
+      box-shadow: none; 
+    }
+  }
+  
+  /* Accessibility improvements */
+  a:focus,
+  button:focus,
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: 3px solid #0d67b5; 
+    outline-offset: 2px; 
+  }
+  
+  /* Animation for sidebar items */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .sidebar-item {
+    animation: fadeIn 0.3s ease-out; 
+  }
+  
+  .post-image:hover {
+    transform: scale(1.02); 
+    transition: transform 0.3s ease-in-out; 
+  }
+}
